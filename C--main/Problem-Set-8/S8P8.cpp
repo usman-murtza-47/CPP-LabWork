@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(){
+    ifstream file1;
+    ofstream file2;
+    file1.open("bat.txt");
+    file2.open("cat.txt");
+    char ch;
+    while(file1.get(ch)){
+        file2.put(ch + 2);
+    }
+    cout<<"Encryption Completed!";
+    file1.close();
+    file2.close();
+}
